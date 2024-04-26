@@ -19,3 +19,5 @@ jobs:
         run: ls -A
       - name: Check styles
         run: npm run eslint
+      - name: Test application
+        run: npm test
