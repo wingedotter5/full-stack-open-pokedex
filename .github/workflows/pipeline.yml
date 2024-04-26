@@ -21,5 +21,7 @@ jobs:
         run: npm run eslint
       - name: Unit tests
         run: npm test
+      - name: Install playwright dependencies
+        run: npx playwright install
       - name: End to end tests
         run: npm run test:e2e
