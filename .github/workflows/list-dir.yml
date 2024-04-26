@@ -1,0 +1,13 @@
+name: List
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ls_job:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: List workflow directory contents
+        run: ls -A
