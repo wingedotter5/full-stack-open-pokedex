@@ -14,9 +14,7 @@ jobs:
         with:
           node-version: '20'
       - name: Install dependencies
-        run: npm i
-      - name: List directory
-        run: ls -A
+        run: npm install
       - name: Check styles
         run: npm run eslint
       - name: Unit tests
@@ -26,4 +24,4 @@ jobs:
       - name: End to end tests
         run: npm run test:e2e
       - name: Trigger deployment
-        run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key={{ secrets.RENDER_API_KEY }}
+        run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
